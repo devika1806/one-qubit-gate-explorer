@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "generated_at_utc": "2026-10-07T10:11:02.578434+00:00",
+  "python": "3.14.4",
+  "qiskit": "2.5.2",
+  "qutip": "5.3.1",
+  "gate_set": [
+    "X",
+    "Y",
+    "Z",
+    "H",
+    "S",
+    "T"
+  ],
+  "max_sequence_length": 4,
+  "initial_states": [
+    "0",
+    "1",
+    "+",
+    "-",
+    "+i",
+    "-i"
+  ],
+  "measurement_bases": [
+    "X",
+    "Y",
+    "Z"
+  ],
+  "sequences": 1555,
+  "settings_per_reference": 27990,
+  "total_reference_comparisons": 55980,
+  "absolute_tolerance": 1e-10,
+  "max_absolute_probability_error": {
+    "qiskit": 8.881784197001252e-16,
+    "qutip": 7.771561172376096e-16
+  },
+  "scope": "Exact ideal probabilities only. No external hardware, noise model, or Qiskit Experiments fitter was run."
+}
