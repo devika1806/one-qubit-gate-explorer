@@ -1,0 +1,3 @@
+# Optional visual interface; the CLI and core tests use only the standard library.
+streamlit==1.65.0
+altair==6.3.0

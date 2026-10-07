@@ -1,0 +1,28 @@
+"""Small experiments: predict first, then change just one thing."""
+
+LESSONS = [
+    {"title": "1. Establish a control", "a": "", "b": "X", "initial": "0", "basis": "Z",
+     "question": "Does an X gate change the measurement of a qubit prepared in 0?",
+     "answer": "Different", "why": "The control returns 0. X swaps the two amplitudes, so circuit B returns 1."},
+    {"title": "2. Undo a gate", "a": "", "b": "H H", "initial": "0", "basis": "Z",
+     "question": "Do two Hadamard gates act like two independent coin flips?",
+     "answer": "Same", "why": "H followed by H is the identity. There is no measurement between them; the amplitudes interfere and return the qubit to 0."},
+    {"title": "3. Find the hidden phase", "a": "H", "b": "H Z", "initial": "0", "basis": "Z",
+     "question": "Can a Z measurement tell the plus state from the minus state?",
+     "answer": "Same", "why": "Both give 50/50 Z outcomes. Z changes the relative sign after H, but the squared magnitudes stay the same. Identical probabilities in one basis do not prove identical states."},
+    {"title": "4. Choose a better measurement", "a": "H", "b": "H Z", "initial": "0", "basis": "X",
+     "question": "Can the same two preparations be distinguished in the X basis?",
+     "answer": "Different", "why": "The plus state gives X outcome 0 (+1); the minus state gives X outcome 1 (-1). A final H before an ordinary Z measurement implements this change of basis."},
+    {"title": "5. Test gate order", "a": "H X", "b": "X H", "initial": "0", "basis": "X",
+     "question": "Does swapping the order of H and X change the output?",
+     "answer": "Different", "why": "Read left to right: H then X prepares plus; X then H prepares minus. X measurement distinguishes them even though Z measurement would not."},
+    {"title": "6. Recognize global phase", "a": "X Z", "b": "Z X", "initial": "+", "basis": "X",
+     "question": "Are states that differ by an overall minus sign physically distinguishable?",
+     "answer": "Same", "why": "XZ and ZX differ by a global minus sign. Every measurement probability agrees. Raw amplitude signs alone can therefore be misleading."},
+    {"title": "7. Look along the Y axis", "a": "H S", "b": "H S S S", "initial": "0", "basis": "Y",
+     "question": "Can Y measurement distinguish plus-i from minus-i?",
+     "answer": "Different", "why": "H then S prepares plus-i; H then S three times prepares minus-i. Both look 50/50 in Z and X, but opposite in Y."},
+    {"title": "8. Explore a smaller phase", "a": "H", "b": "H T", "initial": "0", "basis": "X",
+     "question": "Does a T gate create a smaller observable change than Z after H?",
+     "answer": "Different", "why": "After H then T, P(X outcome 0) is (1 + cos(pi/4))/2, about 85.36%. This is a probability difference, not perfect single-shot distinguishability."},
+]
